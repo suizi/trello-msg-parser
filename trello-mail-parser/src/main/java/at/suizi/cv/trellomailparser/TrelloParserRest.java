@@ -3,17 +3,10 @@ package at.suizi.cv.trellomailparser;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class TrelloParserRest {
-
-	@RequestMapping("/")
-	@ResponseBody
-	public String home() {
-		return "Welcome to my first heroku experiments";
-	}
 
 	@RequestMapping(path = "/parse", method = RequestMethod.POST)
 	public String format(@RequestBody String msg) {
